@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Library App</title>
+</head>
+<body>
+    <header>
+        <h1>Library App</h1>
+      </header>
+
+      <div>
+        <form id="bookForm">
+          <input type="text" id="title" name="title" placeholder="title">
+          <input type="text" id="author" name="author" placeholder="author">
+          <input type="number" id="pages" name="pages" placeholder="pages">        
+          <input type="text" id="read" name="read" placeholder="read">
+          <button type="button" onclick="addBookToLibrary()">Add book</button>
+        </form>
+      </div>
+
+      <div id="bookList">
+        <!-- Book entries will be added here dynamically -->
+      </div>
+
+      <table id="bookTable">
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Number of Pages</th>
+        </tr>
+      </table>
+
+      <script src="main.js"></script>
+
+    
+</body>
+</html>
