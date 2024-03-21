@@ -54,6 +54,8 @@ function displayBooksInTable() {
     } else {
       tbody.innerHTML = ''; // Clear existing rows
     }
+    //Call function to add table header
+    addTableHeader();
 
     myLibrary.forEach(function(book, index) {
       var row = tbody.insertRow();
@@ -83,3 +85,28 @@ function removeBook() {
     myLibrary.splice(index, 1);
     displayBooksInTable(); // Re-display books after removal
 }
+
+//Function to create a table header
+function addTableHeader () {
+  //create a new paragraph element
+  var tableHeader = document.createElement('tr');
+
+  // Create table header cells with the specified headings
+  var headings = ["Title", "Author", "Number of Pages", "Book Read", ""];
+  for (var i = 0; i < headings.length; i++) {
+    var th = document.createElement("th");
+    th.textContent = headings[i];
+    tableHeader.appendChild(th);
+  }
+
+  // Get the table element
+  var table = document.getElementById("tableContainer");
+
+  // Add the header row to the table
+  var tableBody = table.querySelector("tbody");
+  tableBody.appendChild(tableHeader);
+
+}
+
+
+
