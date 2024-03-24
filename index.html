@@ -13,11 +13,11 @@
 
       <div id="formContainer">
         <form id="bookForm">
-          <input type="text" id="title" name="title" placeholder="title">
-          <input type="text" id="author" name="author" placeholder="author">
-          <input type="number" id="pages" name="pages" placeholder="pages">        
-          <input type="text" id="read" name="read" placeholder="read">
-          <button type="button" onclick="addBookToLibrary()">Add book</button>
+          <input type="text" id="title" name="title" placeholder="title of book" required>
+          <input type="text" id="author" name="author" placeholder="author" required>
+          <input type="number" id="pages" name="pages" placeholder="pages" required>        
+          <input type="text" id="read" name="read" placeholder="read" required>
+          <button type="submit" onclick="addBookToLibrary()">Add book</button>          
         </form>
       </div>
 
